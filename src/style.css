@@ -1,0 +1,203 @@
+
+/* from w3schools.com/css/css_rwd_intro.asp
+ * Responsive web design
+ *
+ */
+
+/* css3 see w3schools.com/css/css3_intro.asp */
+* {
+  box-sizing: border-box;
+}
+
+@-ms-viewport{
+  width: device-width;
+  }
+
+/* w3schools.com/css/css_rwd_grid.asp 
+ * each column is 1/12th the whole page
+ *
+ * then format them all the same
+ * use these columns to build rows on the page
+ *
+ */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    /* border: 1px solid red; */
+}
+
+html {
+  font-family: Verdana, Geneva sans-serif;
+  }
+
+body {
+  margin: 0;
+}
+ /* style the header */
+.header {
+  background-color: #ebebe0;
+  color: #333300;
+  padding: 25px;
+  text-align: center;
+  }
+
+/* Style the top navigation bar */
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ebebe0;
+}
+
+ul.topnav li {
+    float: left;
+}
+
+/* Style the topnav links */
+.topnav li a {
+    /* float: left; */
+    display: block;
+    color: #333300;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+ul.topnav li a:hover:not(.active) {
+    /* background-color: #ddd; */
+    color: #666600;
+}
+
+ul.topnav li a.active {
+    /* background-color: #ddd; */
+    color: #000;
+}
+
+ul.topnav li.right {
+    float: right;
+}
+
+@media screen and (max-width: 600px){
+    ul.topnav li.right, 
+    ul.topnav li {float: none;}
+}
+
+/* Style the content */
+.content {
+    background-color: #fff;
+    padding: 10px;
+    /* height: 200px; Should be removed. Only for demonstration */
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 10px;
+    /* height: 300px; Should be removed. Only for demonstration */
+}
+
+/* Left and right column 
+* todo figure out how to get around min-width for responsive
+*/
+.column.side {
+    width: 25%;
+    min-width: 100px;
+}
+
+/* Middle column 
+* todo figure out how to get around min-width for responsive
+*/
+.column.middle {
+    text-align: center;
+    width: 50%;
+    min-width: 400px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style the footer */
+.footer {
+  background-color: #ebebe0;
+  color: #333300;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Style the paragraph */
+p.instructions {
+  text-align: center;
+  display: inline-block;
+  background-color: #fff;
+  font-size: 1.25em;
+}
+
+/* Style the button */
+button.large {
+    background-color: #ebebe0;
+    border-style: solid;
+    border-color: #e1e1d0;
+    border-radius: 5px;
+    color: #333300;
+    padding: 4px 10px;
+    margin: 3px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 100%;
+    height: 50px;
+    width: 20%;
+}
+
+button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: #e1e1e1;
+}
+
+table.results {
+    border-collapse: collapse;
+    width: 90%;
+}
+
+td.results, th.results {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+tr.results:nth-child(even) {
+    background-color: #ebebe0;
+}
+
+tr.results:hover {
+    background-color: #e1e1e0;
+}
+
+th.results  {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    font-style: normal;
+    background-color: #333300;
+    color: #ebebe0;
+}
+
+
